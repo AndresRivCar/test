@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PQRS - Trimtek</title>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" href="">
+  <style type="text/css">
+    #consultar, #generar{
+      display: none;
+    }
+  </style>
+<body>
+  <h1 class="font-weight-normal" style="text-align: center"> Trim-Teck - PQRSF System </h1>
+
+
+  <nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <button class="btn btn-outline-success" type="button" onclick="mostrarConsultar();">Conusltar</button>
+      <button class="btn btn-outline-success" type="button" onclick="mostrarGenerar();">Generar</button>
+    </form>
+  </nav>
+  <br>
+
+  <form class="col-sm-4" id="generar">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Código del área a la que va dirigida la queja</label>
+      <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="123">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Identificación</label>
+      <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="123456">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Código del servicio</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>Telefonía</option>
+        <option>Internet</option>
+        <option>Televisión</option>
+        <option>Agua</option>
+        <option>Luz</option>
+        <option>Alcantarillado</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Código del servicio</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>Petición</option>
+        <option>Queja</option>
+        <option>Reclamo</option>
+        <option>Sugerencia</option>
+        <option>Felicitación</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-success btn-lg btn-block">Guardar</button>
+  </form>
+
+  <form class="col-sm-4" id="consultar">
+  <div class="form-group">
+    <label for="formGroupExampleInput">Código de la solicitud</label>
+    <input type="number" class="form-control" id="formGroupExampleInput" placeholder="123">
+  </div>
+  <button type="button" class="btn btn-success btn-lg btn-block">Consultar</button>
+  </form>
+
+  <script type="text/javascript">
+    function mostrarConsultar(){
+      document.getElementById('consultar').style.display = 'block';
+      document.getElementById('generar').style.display = 'none';
+    }
+
+    function mostrarGenerar(){
+      document.getElementById('generar').style.display = 'block';
+      document.getElementById('consultar').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
